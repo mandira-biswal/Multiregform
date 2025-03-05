@@ -1,0 +1,434 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Correctly link to the CSS file inside the public/css folder -->
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> 
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+ 
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Oxanium:wght@200..800&display=swa');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image:url("https://github.com/CodeWithLoremHacker/Responsive-Contact-Page/blob/main/img/login-background.jpg?raw=true"); /* Replace 'your-background-image.jpg' with the path to your image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+.card{
+    background-color: transparent;
+}
+/* Card styling */
+.card {
+    background-color: rgba(16, 14, 14, 0.189); /* Transparent background */
+    color: rgb(72, 15, 42); /* White text color */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Optional rounded corners */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* Make sure the card content does not overflow */
+    max-width: 300px;
+}
+
+/* Hover effect for card */
+.card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+/* Animated card */
+.animated-card {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card title styling */
+.card-title {
+    font-size: 1.5rem; /* Adjust size if needed */
+    font-weight: bold;
+}
+
+/* Card body text */
+.card-text {
+    font-size: 1rem;
+}
+
+/* Card button */
+.btn-primary {
+    background-color: #007bff; /* Blue color */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive images */
+.card-img-top {
+    object-fit: cover;
+    height: 200px; /* Set a fixed height for images */
+}
+
+/* Text light class for overall white text */
+.text-light {
+    color: white !important;
+}
+
+/* Card button */
+.btn-primary {
+    background-color: #007bff; /* Blue color */
+    border: none;
+    color: white; /* White text */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for button */
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Optional focus effect for accessibility */
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.6); /* Blue outline on focus */
+}
+
+/* Container for the marquee text */
+.promo-marquee-container {
+    width: 100%;
+    background-color: #333; /* Dark background */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Scrolling effect */
+.promo-marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee-animation 10s linear infinite;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Keyframes for scrolling effect */
+@keyframes marquee-animation {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.footer {
+    background-color: #333; /* Dark background for the footer */
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+     margin-top: 210px;
+}
+
+/* Footer Bottom Styling (Copyright Section) */
+.footer-bottom {
+    background-color: #222; /* Darker background for the bottom section */
+    color: #bbb;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+</style>
+
+
+</head>
+
+<body class="body">
+{{> navbar}}
+<div class="promo-marquee-container">
+        <p class="promo-marquee-text">50% off on your first order! Hurry up!</p>
+    </div>
+
+    <div class="container py-5">
+        <!-- Your content here... -->
+    </div>
+    <div class="container py-5">
+        <h1 class="text-light" "text-" >Popular Dishes</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-5 py-4">
+            <div class="col ">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu4UC4po8EU1640hL0SsAzsceitwxzfe3SDQ&s" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title " class="text-light">Tiramisu Cake</h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.9 <i class="bi bi-star-fill text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                    <h3>390<i class="bi bi-currency-rupee"></i></h3>
+                    <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="https://lovingitvegan.com/wp-content/uploads/2015/10/Vanilla-Cake-10-480x270.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title ">Strawberry Cake</h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.9 <i class="bi bi-star-fill text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>290<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/recipe_legacy/4587-3-large.jpg?itok=rBh6dBKP" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title ">Apple Pie</h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.8 <i class="bi bi-star-half text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>490<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrWmoivD1NbmOmlGEgIacCKueXJbCx92s6Yw&s" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title ">Choclate Mousse</h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.9 <i class="bi bi-star-half text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>590<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="https://c.ndtvimg.com/2022-07/1ar082i8_cake_625x300_29_July_22.jpg?im=FeatureCrop,algorithm=dnn,width=620,height=350?im=FaceCrop,algorithm=dnn,width=1200,height=886" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title "> BlackBerry Cheese </h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.7 <i class="bi bi-star-fill text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>690<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJwmSZeZ_ZFa4YuKicYispg_pIz7HCOcy5PA&s" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title "> BlackBerry Cheese </h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.7 <i class="bi bi-star-fill text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>690<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card">
+                    <img src="https://lovingitvegan.com/wp-content/uploads/2015/10/Vanilla-Cake-10-480x270.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title ">Chia Pudding</h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.9 <i class="bi bi-star-fill text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>290<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/recipe_legacy/4587-3-large.jpg?itok=rBh6dBKP" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title ">Apple Pie</h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.8 <i class="bi bi-star-half text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>490<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrWmoivD1NbmOmlGEgIacCKueXJbCx92s6Yw&s" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title ">Choclate Mousse</h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.9 <i class="bi bi-star-half text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>590<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="https://c.ndtvimg.com/2022-07/1ar082i8_cake_625x300_29_July_22.jpg?im=FeatureCrop,algorithm=dnn,width=620,height=350?im=FaceCrop,algorithm=dnn,width=1200,height=886" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title "> BlackBerry Cheese </h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.7 <i class="bi bi-star-fill text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>690<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJwmSZeZ_ZFa4YuKicYispg_pIz7HCOcy5PA&s" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title "> BlackBerry Cheese </h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.7 <i class="bi bi-star-fill text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>690<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="col">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJwmSZeZ_ZFa4YuKicYispg_pIz7HCOcy5PA&s" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title "> BlackBerry Cheese </h4>
+                        <i class="bi bi-stop-circle text-success"></i> Eggless
+                        <p class="card-text">
+                        <h4> 4.7 <i class="bi bi-star-fill text-warning"></i></h4>
+                        </p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>690<i class="bi bi-currency-rupee"></i></h3>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+ <!-- Footer Section -->
+<footer class="footer">
+    <div class="container py-4">
+        <div class="row">
+            <!-- Contact Info Column -->
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <!-- Social Media Column -->
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <ul class="social-icons">
+                    <li><a href="#" target="_blank" class="bi bi-facebook">Facebook</a></li>
+                    <li><a href="#" target="_blank" class="bi bi-twitter">Twitter</a></li>
+                    <li><a href="#" target="_blank" class="bi bi-instagram">Instagram</a></li>
+                </ul>
+            </div>
+            <!-- About Column -->
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>We are a bakery offering delicious treats made with love and care.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container text-center py-3">
+            <p>&copy; 2024 Your Bakery. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+

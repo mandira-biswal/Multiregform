@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Correctly link to the CSS file inside the public/css folder -->
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> 
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+ 
+<style>
+
+/* Body Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image:url("https://github.com/CodeWithLoremHacker/Responsive-Contact-Page/blob/main/img/login-background.jpg?raw=true"); /* Replace 'your-background-image.jpg' with the path to your image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: transparent; /* Transparent background */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+  padding: 20px;
+  max-width: 900px; /* Adjust width as needed */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  border-radius: 10px;
+}
+
+h1 {
+  color: rgb(255, 255, 255); /* Dark color for heading */
+  margin-top: 0; /* Remove default margin */
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+form {
+  flex: 1;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+  width: calc(100% - 22px); /* Adjust for padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white; /* Text color */
+  box-shadow: 0px 0px 5px rgba(135, 206, 235, 0.7); /* Sky blue box shadow for input */
+  transition: border-color 0.3s ease; /* Added transition */
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+input[type="submit"]:hover {
+  background-image: linear-gradient(to bottom, #007bff, skyblue);
+  font-weight: bold;
+  color: white;
+}
+
+.image-container {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image-container img {
+  width: 27rem;
+  height: 25rem;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"],input[type="radio"] :focus, textarea:focus {
+  border-color: skyblue; /* Added border color when focused */
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="tel"]::placeholder ,input[type="radio"]::placeholder, textarea::placeholder {
+  color: white; /* Changed placeholder color */
+  font-size: 16px;
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .form-container {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  form {
+    margin-right: 0;
+  }
+  .image-container {
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .container {
+    height: auto; /* Removing the height */
+    padding: 10px;
+    margin-top: 0;
+  }
+
+  .form-container {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .image-container {
+    padding-right: 0;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  input[type="submit"] {
+    width: auto; /* Adjusting the width to fit content */
+  }
+}
+label{
+  color: white;
+}
+/* Styling for the entire form container */
+.hi {
+   width: calc(100% - 22px); /* Adjust for padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white; /* Text color */
+  box-shadow: 0px 0px 5px rgba(135, 206, 235, 0.7); /* Sky blue box shadow for input */
+  transition: border-color 0.3s ease; /* Added transition */
+  font-size: 16px;
+ 
+}
+/* Styling for the gender radio buttons */
+.gender-options {
+  display: flex;
+  align-items: center;
+  
+}
+
+/* Styling the individual radio inputs */
+.gender-options input[type="radio"] {
+
+  cursor: pointer;
+}
+
+/* Styling the labels */
+.gender-options label {
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Styling for the radio button labels on hover */
+.gender-options label:hover {
+  color: #007bff; /* Changes color on hover */
+}
+
+/* Focus effect for radio buttons */
+.gender-options input[type="radio"]:focus {
+  outline: none;
+  border-color: skyblue; /* Focus border color */
+}
+
+.footer {
+    background-color: #333; /* Dark background for the footer */
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+     margin-top: 210px;
+}
+
+/* Footer Bottom Styling (Copyright Section) */
+.footer-bottom {
+    background-color: #222; /* Darker background for the bottom section */
+    color: #bbb;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+</style>
+
+
+</head>
+
+<body class="body">
+{{> navbar}}
+  
+
+     <div class="container">
+    <div class="form-container">
+            <div class="image-container">
+        <img src="https://github.com/CodeWithLoremHacker/Responsive-Contact-Page/blob/main/img/contact-us-right-image.gif?raw=true" alt="Image"> <!-- Replace 'your-image.jpg' with the path to your image -->
+      </div>
+
+      <form action="/register" method="post">
+        <h1>Contact Us</h1> <!-- Heading -->
+         <!-- Username Field -->
+          <input type="text" placeholder="Name" required autocomplete="off">
+        <input type="email" placeholder="Email" required autocomplete="off">
+        <input type="tel" placeholder="Phone" required autocomplete="off">
+                <div class="hi">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+                </div>
+                <input type="text" placeholder="Address" required autocomplete="off">
+
+        <textarea placeholder="Message"></textarea required autocomplete="off">
+        <input type="submit" value="Submit"></input>
+      </form>
+
+    </div>
+  </div>
+
+       <!-- Footer Section -->
+<footer class="footer">
+    <div class="container py-4">
+        <div class="row">
+            <!-- Contact Info Column -->
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <!-- Social Media Column -->
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <ul class="social-icons">
+                    <li><a href="#" target="_blank" class="bi bi-facebook">Facebook</a></li>
+                    <li><a href="#" target="_blank" class="bi bi-twitter">Twitter</a></li>
+                    <li><a href="#" target="_blank" class="bi bi-instagram">Instagram</a></li>
+                </ul>
+            </div>
+            <!-- About Column -->
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>We are a bakery offering delicious treats made with love and care.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container text-center py-3">
+            <p>&copy; 2024 Your Bakery. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>
